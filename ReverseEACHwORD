@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.util.*;
+
+class reverseEachWord{
+
+     public static String reverseWordWise(String input){
+         String ans="";
+         int i=0,endWord;
+         int currentWord=0;
+         for(;i<input.length();i++){
+              
+             if(input.charAt(i)==' '){
+               endWord=i-1;
+             String reverseWord="";
+             for(int j=currentWord;j<=endWord;j++){
+                  reverseWord=input.charAt(j)+reverseWord;
+             
+             }
+              ans+=reverseWord+" ";
+              currentWord=i+1;
+             
+             // System.out.print(reverseWord+" ");
+             }
+         }
+
+                endWord=i-1;
+             String reverseWord="";
+             for(int j=currentWord;j<=endWord;j++){
+                  reverseWord=input.charAt(j)+reverseWord;
+             }
+             // currentWord=i+1;
+              ans+=reverseWord;
+             // System.out.print(reverseWord+" ");
+             
+           return ans;
+           
+        
+         
+     }
+
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String input=sc.nextLine();
+        System.out.print(reverseWordWise(input));
+        //reverseWordWise(input);
+
+    }
+}
